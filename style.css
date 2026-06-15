@@ -70,6 +70,9 @@ button {
     cursor: pointer;
     font-size: 1rem;
     font-family: 'Cinzel', serif;
+    -webkit-user-select: none;
+    -ms-user-select: none;     
+    user-select: none;
 }
 
 button:hover {
