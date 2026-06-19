@@ -27,7 +27,8 @@ body {
     display: flex;
     gap: 15px;
     margin-top: 1rem;
-    margin-left: 12rem;
+      justify-content: center;
+    align-items: center;
 }
 #izborJezika {
     background-color: #141923;
@@ -35,6 +36,7 @@ body {
     border: 2px solid #004d43;
     border-radius: 6px;
     text-align: center;
+    user-select: none;
 }
 #izborJezika:focus,
 #izborJezika:active {
@@ -49,6 +51,7 @@ body {
     border: 2px solid #004d43;
     border-radius: 6px;
     text-align: center;
+    user-select: none;
 }
 #izborPrevodioca:focus,
 #izborPrevodioca:active {
@@ -66,20 +69,46 @@ body {
 }
 
 .divizija {
-    border: 1px solid #004d43;
+    border: 2px solid #004d43;
     border-radius: 8px;
     padding: 20px;
     width: 100%;
     max-width: 400px;
-    min-height: 150px;
-    text-align: center;
-    margin: 0 auto;
+    height: 180px; 
+    overflow-y: auto; 
     background-color: #141923;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+#ajet {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
-    box-sizing: border-box;
+    text-align: center;
+    min-height: 100%; 
+    width: 100%;
+}
+
+.izvor-ajeta {
+    display: block; 
+    margin-top: 10px; 
+    color: #475569;
+    font-size: 0.85rem;
+}
+
+.divizija::-webkit-scrollbar {
+    width: 6px; 
+}
+
+.divizija::-webkit-scrollbar-thumb {
+    background: #004d43; 
+    border-radius: 4px;
+}
+
+.divizija::-webkit-scrollbar-thumb:hover {
+    background: #03b490; 
 }
 
 #ajet {
@@ -123,14 +152,6 @@ button:active {
     box-shadow: 0 0 20px rgba(0, 255, 204, 0.4);
 }
 
-#fusnota {
-    text-align: center;
-    color: #475569;
-    font-size: 0.8rem;
-    width: 100%;
-    margin-top: 1rem;
-    margin-bottom: 0;
-}
 
 @media (max-width: 600px) {
     #naslov {

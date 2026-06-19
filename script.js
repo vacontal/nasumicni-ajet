@@ -94,11 +94,11 @@ function prikaziAjet()
             const oznakaAjet = trenutniJezik === "en" ? "Ayah" : "ajet";
 
             elementAjet.innerHTML = `
-                "${tekstAjeta}" <br>
-                <small style="display:block; margin-top:10px; color:#475569;">
-                    — ${oznakaSura} ${nazivSure}, ${oznakaAjet} ${brojAjeta}
-                </small>
-            `;
+    <div class="tekst-ajeta">"${tekstAjeta}"</div>
+    <div class="izvor-ajeta">
+        — ${oznakaSura} ${nazivSure}, ${oznakaAjet} ${brojAjeta}
+    </div>
+`;
             
             setTimeout(() => {
                 elementAjet.classList.remove("ucitavanje-teksta");
